@@ -28,9 +28,17 @@ const App = () => {
 	}, [searchValue]);
 
 	const addFavouriteMovie = (movie) => {
-		const newFavouriteList = [...favourites, movie];
-		setFavourites(newFavouriteList);
-	};
+		const movieExists = favourites.some(
+		  (favourite) => favourite.imdbID === movie.imdbID
+		);
+	  
+		if (movieExists) {
+		  alert('This movie is already in your favourites list.');
+		} else {
+		  const newFavouriteList = [...favourites, movie];
+		  setFavourites(newFavouriteList);
+		}
+	  };
 
 	const removeFavouriteMovie = (movie) => {
 		const newFavouriteList = favourites.filter(
