@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
+body {
+	background: #141414;
+	color: #ffffff;
+	font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movie-app > .row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.image-container {
+	position: relative;
+  width: 200px;
+	transition: transform 0.2s;
+	margin: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.image-container img {
+	width: 100%;
+	height: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.image-container:hover {
+	cursor: pointer;
+	transform: scale(1.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image-container:hover .overlay {
+	opacity: 1;
 }
+
+.overlay {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 50px;
+	bottom: 0;
+	transition: 0.5s ease;
+	opacity: 0;
+	font-size: 20px;
+	padding: 10px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.overlay svg {
+	transition: fill 0.2s;
+}
+
+.overlay:hover svg {
+	fill: #ffcc00;
+}
+
