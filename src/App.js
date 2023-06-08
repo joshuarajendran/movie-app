@@ -11,7 +11,7 @@ const App = () => {
 	const [movies, setMovies] = useState([]);
 	const [favourites, setFavourites] = useState([]);
 	const [searchValue, setSearchValue] = useState('');
-	const apiKey = '62ddf7ce';
+	const apiKey = 'YOUR_API_KEY';
 
 	const getMovieRequest = async (searchValue) => {
     	const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=${apiKey}`;
