@@ -18,14 +18,8 @@ A responsive web app that allows users to browse and search for movies and add t
 
 ## API Key
 
-This project uses the OMDb API to fetch movie information. To make API requests, you'll need to obtain an API key from OMDb (http://www.omdbapi.com/). Once you have the API key, add it to the `getMovieRequest` function in the `App.js` file.
+This project uses the OMDb API to fetch movie information. To make API requests, you'll need to obtain an API key from OMDb (http://www.omdbapi.com/). Once you have the API key, add it to the `App.js` file.
 
-      const getMovieRequest = async (searchValue) => {
-       const apiKey = 'YOUR_API_KEY';
-       const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=${apiKey}`;
-       // ...
-      };
+      const apiKey = 'YOUR_API_KEY';
 
 Replace 'YOUR_API_KEY' with your actual API key.
-
-Note: This project is currently locally hosted, so it can only be used on your own machine.
