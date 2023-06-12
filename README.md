@@ -13,8 +13,14 @@ A responsive web app that allows users to browse and search for movies and add t
 ## Installation and Usage
 
 1. Clone this repository to your local machine.
-2. Install the required dependencies
-3. Start a local development server
+2. Install the required dependencies using 
+```
+npm install
+```
+4. Start a local development server
+```
+npm start
+```
 
 ## API Key
 
